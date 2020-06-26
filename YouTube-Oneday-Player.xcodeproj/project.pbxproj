@@ -12,6 +12,8 @@
 		C516C27724A5216800E94F8B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516C27624A5216800E94F8B /* Model.swift */; };
 		C516C27924A53FBE00E94F8B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516C27824A53FBE00E94F8B /* Response.swift */; };
 		C52BCD7F24A601EA00BD22EC /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD7E24A601EA00BD22EC /* ConstantsTemplate.swift */; };
+		C52BCD8124A64F6D00BD22EC /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD8024A64F6D00BD22EC /* VideoTableViewCell.swift */; };
+		C52BCD8824A6831A00BD22EC /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD8724A6831A00BD22EC /* CacheManager.swift */; };
 		C5E3856A24A2A40E001571C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3856924A2A40E001571C4 /* AppDelegate.swift */; };
 		C5E3856C24A2A40E001571C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3856B24A2A40E001571C4 /* SceneDelegate.swift */; };
 		C5E3856E24A2A40E001571C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3856D24A2A40E001571C4 /* ViewController.swift */; };
@@ -21,11 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C516C27224A4FCE900E94F8B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C516C27224A4FCE900E94F8B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		C516C27424A5012200E94F8B /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C516C27624A5216800E94F8B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C516C27824A53FBE00E94F8B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C52BCD7E24A601EA00BD22EC /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
+		C52BCD8024A64F6D00BD22EC /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		C52BCD8724A6831A00BD22EC /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		C5E3856624A2A40E001571C4 /* YouTube-Oneday-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTube-Oneday-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3856924A2A40E001571C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E3856B24A2A40E001571C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C52BCD8224A64F9200BD22EC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5E3856D24A2A40E001571C4 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C52BCD8324A64FAD00BD22EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C52BCD8024A64F6D00BD22EC /* VideoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C52BCD8424A64FB500BD22EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C516C27424A5012200E94F8B /* Video.swift */,
+				C516C27624A5216800E94F8B /* Model.swift */,
+				C516C27824A53FBE00E94F8B /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C52BCD8524A64FC200BD22EC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C5E3856F24A2A40E001571C4 /* Main.storyboard */,
+				C5E3857424A2A40F001571C4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C52BCD8624A64FD800BD22EC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C52BCD7E24A601EA00BD22EC /* ConstantsTemplate.swift */,
+				C516C27224A4FCE900E94F8B /* Constants.swift */,
+				C52BCD8724A6831A00BD22EC /* CacheManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C5E3855D24A2A40E001571C4 = {
 			isa = PBXGroup;
 			children = (
@@ -68,16 +117,13 @@
 			children = (
 				C5E3856924A2A40E001571C4 /* AppDelegate.swift */,
 				C5E3856B24A2A40E001571C4 /* SceneDelegate.swift */,
-				C5E3856D24A2A40E001571C4 /* ViewController.swift */,
-				C5E3856F24A2A40E001571C4 /* Main.storyboard */,
+				C52BCD8624A64FD800BD22EC /* Helpers */,
+				C52BCD8524A64FC200BD22EC /* Storyboards */,
+				C52BCD8424A64FB500BD22EC /* Models */,
+				C52BCD8324A64FAD00BD22EC /* Views */,
+				C52BCD8224A64F9200BD22EC /* View Controllers */,
 				C5E3857224A2A40F001571C4 /* Assets.xcassets */,
-				C5E3857424A2A40F001571C4 /* LaunchScreen.storyboard */,
 				C5E3857724A2A40F001571C4 /* Info.plist */,
-				C52BCD7E24A601EA00BD22EC /* ConstantsTemplate.swift */,
-				C516C27224A4FCE900E94F8B /* Constants.swift */,
-				C516C27424A5012200E94F8B /* Video.swift */,
-				C516C27624A5216800E94F8B /* Model.swift */,
-				C516C27824A53FBE00E94F8B /* Response.swift */,
 			);
 			path = "YouTube-Oneday-Player";
 			sourceTree = "<group>";
@@ -159,8 +205,10 @@
 				C52BCD7F24A601EA00BD22EC /* ConstantsTemplate.swift in Sources */,
 				C516C27724A5216800E94F8B /* Model.swift in Sources */,
 				C516C27324A4FCE900E94F8B /* Constants.swift in Sources */,
+				C52BCD8824A6831A00BD22EC /* CacheManager.swift in Sources */,
 				C516C27524A5012200E94F8B /* Video.swift in Sources */,
 				C516C27924A53FBE00E94F8B /* Response.swift in Sources */,
+				C52BCD8124A64F6D00BD22EC /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
