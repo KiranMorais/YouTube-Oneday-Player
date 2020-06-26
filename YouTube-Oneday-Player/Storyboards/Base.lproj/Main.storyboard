@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="x9V-h1-FHc" customClass="VideoTableViewCell" customModule="YouTube_Oneday_Player" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="x9V-h1-FHc" customClass="VideoTableViewCell" customModule="YouTube_Oneday_Player" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="303"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x9V-h1-FHc" id="Wyf-47-Pbl">
@@ -61,6 +61,7 @@
                                             <outlet property="dateLabel" destination="CYf-Zt-ndh" id="clZ-d2-4xr"/>
                                             <outlet property="thumbnailImageView" destination="aaT-fK-4yu" id="IdZ-SE-WKH"/>
                                             <outlet property="titleLabel" destination="XsS-gi-ijt" id="RA7-vL-q5p"/>
+                                            <segue destination="E6w-LZ-ybz" kind="show" id="J2I-lK-mee"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -82,6 +83,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="90"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Ayf-ZP-mQY">
+            <objects>
+                <viewController id="E6w-LZ-ybz" customClass="DetailViewController" customModule="YouTube_Oneday_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jrj-4D-F53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KrA-Pc-6Ne">
+                                <rect key="frame" x="10" y="50" width="394" height="758"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsY-6b-mlE">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="221.5"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SsY-6b-mlE" secondAttribute="height" multiplier="1280:720" id="khe-py-QJf"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRe-Rj-0xh">
+                                        <rect key="frame" x="0.0" y="231.5" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="max-yO-P9w">
+                                        <rect key="frame" x="0.0" y="262" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="747" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lBR-et-eo8">
+                                        <rect key="frame" x="0.0" y="292.5" width="394" height="465.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="khS-Bs-Mf6" firstAttribute="bottom" secondItem="KrA-Pc-6Ne" secondAttribute="bottom" id="HCq-R5-fsB"/>
+                            <constraint firstItem="KrA-Pc-6Ne" firstAttribute="top" secondItem="khS-Bs-Mf6" secondAttribute="top" constant="50" id="hOH-If-v7Y"/>
+                            <constraint firstItem="KrA-Pc-6Ne" firstAttribute="leading" secondItem="khS-Bs-Mf6" secondAttribute="leading" constant="10" id="l4v-ng-8Y0"/>
+                            <constraint firstItem="khS-Bs-Mf6" firstAttribute="trailing" secondItem="KrA-Pc-6Ne" secondAttribute="trailing" constant="10" id="wb3-so-5WM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="khS-Bs-Mf6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="02M-4G-MGM"/>
+                    <connections>
+                        <outlet property="dateView" destination="max-yO-P9w" id="mTR-81-uFB"/>
+                        <outlet property="textView" destination="lBR-et-eo8" id="ibE-MD-zFH"/>
+                        <outlet property="titleView" destination="oRe-Rj-0xh" id="0Xw-Qf-Hst"/>
+                        <outlet property="webView" destination="SsY-6b-mlE" id="m2f-qc-0bq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IkR-nQ-ukH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="92"/>
         </scene>
     </scenes>
 </document>

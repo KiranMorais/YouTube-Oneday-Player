@@ -14,6 +14,8 @@
 		C52BCD7F24A601EA00BD22EC /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD7E24A601EA00BD22EC /* ConstantsTemplate.swift */; };
 		C52BCD8124A64F6D00BD22EC /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD8024A64F6D00BD22EC /* VideoTableViewCell.swift */; };
 		C52BCD8824A6831A00BD22EC /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD8724A6831A00BD22EC /* CacheManager.swift */; };
+		C52BCD8A24A689D200BD22EC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52BCD8924A689D200BD22EC /* DetailViewController.swift */; };
+		C52BCD8D24A694E700BD22EC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52BCD8C24A694E700BD22EC /* WebKit.framework */; };
 		C5E3856A24A2A40E001571C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3856924A2A40E001571C4 /* AppDelegate.swift */; };
 		C5E3856C24A2A40E001571C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3856B24A2A40E001571C4 /* SceneDelegate.swift */; };
 		C5E3856E24A2A40E001571C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3856D24A2A40E001571C4 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 		C52BCD7E24A601EA00BD22EC /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
 		C52BCD8024A64F6D00BD22EC /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		C52BCD8724A6831A00BD22EC /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		C52BCD8924A689D200BD22EC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C52BCD8C24A694E700BD22EC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C5E3856624A2A40E001571C4 /* YouTube-Oneday-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTube-Oneday-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3856924A2A40E001571C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E3856B24A2A40E001571C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52BCD8D24A694E700BD22EC /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E3856D24A2A40E001571C4 /* ViewController.swift */,
+				C52BCD8924A689D200BD22EC /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -96,11 +102,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C52BCD8B24A694E600BD22EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C52BCD8C24A694E700BD22EC /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5E3855D24A2A40E001571C4 = {
 			isa = PBXGroup;
 			children = (
 				C5E3856824A2A40E001571C4 /* YouTube-Oneday-Player */,
 				C5E3856724A2A40E001571C4 /* Products */,
+				C52BCD8B24A694E600BD22EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52BCD8A24A689D200BD22EC /* DetailViewController.swift in Sources */,
 				C5E3856E24A2A40E001571C4 /* ViewController.swift in Sources */,
 				C5E3856A24A2A40E001571C4 /* AppDelegate.swift in Sources */,
 				C5E3856C24A2A40E001571C4 /* SceneDelegate.swift in Sources */,
